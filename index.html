@@ -3,11 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- configura a codificação de caracteres do navegador para o UTF-8-->
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
-    <!-- Adiciona o ícone de aba de navegador-->
     <title>HOME - IFSP - Pirituba - DWBA4</title>
-    <!-- Adiciona o título na aba do navegador-->
 
     <style>
         body {
@@ -15,74 +12,75 @@
             padding: 0;
         }
 
-        header {
-            padding: 10px;
-            text-align: left; /* Alinha o conteúdo à esquerda */
+        /* Container do menu */
+        #menu-container {
+            position: relative;
+            z-index: 100; /* Garante que o menu fique acima */
+            background-color: black; /* Fundo preto do menu */
+            padding: 15px;
         }
 
+        /* Estiliza os links do menu */
+        #menu-container ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu-container ul li {
+            margin: 0 15px;
+        }
+
+        #menu-container ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Container da logo */
         .logo-container {
             background-color: green; /* Fundo verde apenas para a logo */
             padding: 10px;
-            text-align: left;
+            text-align: center;
+            position: relative;
+            z-index: 50; /* Mantém a logo abaixo do menu */
         }
 
         .logo {
             display: block;
-            width: auto; /* Mantém o tamanho original da imagem */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-
-        nav ul {
-            list-style: none; /* Remove os marcadores padrão */
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline; /* Links na mesma linha */
-            margin-right: 10px; /* Espaçamento entre os links */
-        }
-
-        nav ul li a {
-            text-decoration: none; /* Remove sublinhado */
-            color: black; /* Cor do texto */
-        }
-
-        .dropdown-content a {
-            color: black; /* Texto preto */
-            background-color: white; /* Fundo branco */
-            text-decoration: none; /* Remove sublinhado */
-            display: block;
-            padding: 10px;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd; /* Fundo cinza claro ao passar o mouse */
+            width: auto;
+            height: auto;
+            margin-top: 15px; /* Espaçamento entre o menu e a logo */
         }
     </style>
 </head>
 
 <body>
+
     <header id="cabecalho">
-        <!-- Container exclusivo para a logo -->
+        <!-- Container para o menu -->
+        <div id="menu-container">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Container para a logo -->
         <div class="logo-container">
             <img src="Imagens/Logo.jpg" alt="IF" class="logo">
         </div>
-
-        <!-- Menu de navegação -->
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CONTATO</a></li>
-                <li><a href="sobre.html">SOBRE</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Conteúdo principal -->
     <main>
         <aside>
-            <!-- Evento -->
             <p><b>Eventos</b></p>
             <figure>
                 <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%">
@@ -115,6 +113,6 @@
             IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
         </p>
     </footer>
-</body>
 
+</body>
 </html>
