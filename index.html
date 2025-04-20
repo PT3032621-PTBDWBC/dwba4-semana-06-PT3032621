@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
@@ -12,25 +11,10 @@
             padding: 0;
         }
 
-        /* Estiliza o menu */
-        #my_menu {
-            background-color: black; /* Fundo preto só no menu */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        #my_menu a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-        }
-
-        /* Remove qualquer fundo do header */
-        header {
-            padding: 10px;
-            background: none;
+        /* Container do menu */
+        #menu-container {
+            position: relative;
+            z-index: 100;
         }
 
         /* Estiliza a logo separadamente */
@@ -47,26 +31,17 @@
         }
     </style>
 </head>
-
 <body>
 
     <header id="cabecalho">
-        <nav>
-            <div id="my_menu">
-                <a href="index.html">HOME</a>
-                <a href="eventos.html">EVENTOS</a>
-                <a href="contato.html">CONTATO</a>
-                <a href="entrar.html">ENTRAR</a>
-                <div class="dropdown">
-                    <a href="#" class="dropbtn">CURSOS</a>
-                    <div class="dropdown-content">
-                        <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
-                        <a href="engenhariaProducao.html">Engenharia de Produção</a>
-                    </div>
-                </div>
-                <a href="sobre.html" class="menu-right">SOBRE</a>
-            </div>
-        </nav>
+        <div id="menu-container"></div>
+
+        <script>
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('menu-container').innerHTML = data)
+                .catch(error => console.error('Erro ao carregar o menu:', error));
+        </script>
 
         <div class="logo-container">
             <img src="Imagens/Logo.jpg" alt="IF" class="logo">
@@ -93,7 +68,7 @@
 
         <section>
             <h1>Conheça o SUAP</h1>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVbOcB1ryh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yVbOcB1ryh0" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -107,7 +82,5 @@
             IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
         </p>
     </footer>
-
 </body>
-
 </html>
