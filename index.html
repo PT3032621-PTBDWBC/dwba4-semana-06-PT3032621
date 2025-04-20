@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
@@ -9,71 +8,81 @@
     <!-- Adiciona o ícone de aba de navegador-->
     <title>HOME - IFSP - Pirituba - DWBA4</title>
     <!-- Adiciona o título na aba do navegador-->
-    
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
 
-  .logo {
-    display: block;
-    width: auto; /* Mantém o tamanho original da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-     background-color: green; /* Apenas a faixa (header) terá fundo verde */
-    text-align: left; /* Ajuste de alinhamento */
-  }
-</style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 10px;
+            text-align: left; /* Alinha o conteúdo à esquerda */
+        }
+
+        .logo-container {
+            background-color: green; /* Fundo verde apenas para a logo */
+            padding: 10px;
+            text-align: left;
+        }
+
+        .logo {
+            display: block;
+            width: auto; /* Mantém o tamanho original da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        nav ul {
+            list-style: none; /* Remove os marcadores padrão */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Links na mesma linha */
+            margin-right: 10px; /* Espaçamento entre os links */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove sublinhado */
+            color: black; /* Cor do texto */
+        }
+
+        .dropdown-content a {
+            color: black; /* Texto preto */
+            background-color: white; /* Fundo branco */
+            text-decoration: none; /* Remove sublinhado */
+            display: block;
+            padding: 10px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd; /* Fundo cinza claro ao passar o mouse */
+        }
+    </style>
 </head>
 
 <body>
-
     <header id="cabecalho">
-        <!-- Indica o cabeçalho do nosso documento-->
+        <!-- Container exclusivo para a logo -->
+        <div class="logo-container">
+            <img src="Imagens/Logo.jpg" alt="IF" class="logo">
+        </div>
 
-        <!--div id="my_menu" align="right">
-	<a href="#">HOME</a> | <a href="#">CONTATO</a> | <a href="sobre.html">SOBRE</a>
-  </div-->
-
+        <!-- Menu de navegação -->
         <nav>
-            <object width="100%" height="65px" data="menu.html"></object>
-        </nav>
-
-        <img src="Imagens/Logo.jpg" alt="IF" class="logo">
-
-        <!-- anexa imagem e texto alternativo-->
-
-        <nav>
-            <!-- Indica que o conteúdo é composto de links de navegação-->
-            <p><b>Cursos</b></p>
             <ul>
-                <!-- Estrutura de lista não ordenada -->
-                <li>
-                    <!-- Item de lista -->
-                    <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
-                </li>
-                <li>
-                    <a href="#">Engenharia de Produção</a>
-                </li>
-                <li>
-                    <a href="#">Gestão em Tecnologia da Informação</a>
-                </li>
-                <li>
-                    <a href="#">Letras</a>
-                </li>
-                <li>
-                    <a href="#">Gestão Pública</a>
-                </li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTATO</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
             </ul>
         </nav>
-
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
-        <!-- indica que é o conteúdo principal dessa página -->
-
         <aside>
-            <!-- indica que é um conteúdo a parte do princial, auxiliar-->
+            <!-- Evento -->
             <p><b>Eventos</b></p>
             <figure>
                 <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%">
@@ -81,30 +90,19 @@
             </figure>
         </aside>
 
-
         <section>
-            <!-- Indica que é uma seção/parte do documento-->
-            <h1>
-                Sobre a Biblioteca
-            </h1>
-
+            <h1>Sobre a Biblioteca</h1>
             <article>
-                <!-- Indica que o conteúdo é completo, ou seja, não depende d eoutros trechos do documento para ter significado -->
                 <img src="Imagens/library.jpeg" alt="Biblioteca" />
                 <h2>Conheça os novos títulos disponíveis na nossa biblioteca</h2>
-                <h6>
-                    <!-- Título de terceiro nível -->
-                    Publicado: Quarta-feira, 14 de agosto de 2019
-                </h6>
+                <h6>Publicado: Quarta-feira, 14 de agosto de 2019</h6>
             </article>
         </section>
+
         <section>
-            <h1>
-                Conheça o SUAP
-            </h1>
+            <h1>Conheça o SUAP</h1>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/yVbOcB1ryh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
-
     </main>
 
     <footer>
@@ -117,16 +115,6 @@
             IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
         </p>
     </footer>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/8.8.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-
 </body>
 
 </html>
