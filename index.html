@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
   <title>HOME - IFSP - Pirituba - DWBA4</title>
 
   <style>
-   .imagem-oval {
-      width: 500px;
-      height: 300px;
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .imagem-oval {
+      width: 80%;
+      max-width: 500px;
+      height: auto;
       object-fit: cover;
       border-radius: 50% / 35%;
       display: block;
       margin: 0 auto;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   }
-   
-   .textCenter {
+    }
+
+    .textCenter {
       text-align: center;
       font-family: Arial, sans-serif;
       margin-top: 30px;
-   }
+    }
 
-   body {
-      margin: 0;
-      padding: 0;
-   }
-
-   #menu-container {
+    #menu-container {
       position: relative;
       z-index: 100;
-   }
+    }
 
-   .logo-container {
+    .logo-container {
       background-color: green;
       padding: 20px;
       text-align: left;
       width: 100%;
-   }
+    }
 
-   .logo {
+    .logo {
       display: block;
       width: auto;
       height: auto;
-   }
+    }
 
-   iframe {
+    iframe {
       display: block;
       margin: 0 auto;
       max-width: 100%;
-   }
-     .tranparente {
+    }
+
+    .transparente {
       background-color: transparent;
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   </style>
 </head>
@@ -76,15 +85,22 @@
     <aside>
       <h2 class="textCenter">Acontece no IFSP!</h2>
       <figure>
-        <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" width="50%" height="50%" class="imagem-oval">
-        <figcaption class="textCenter">Aniversário do IFSP - Pirituba - Palestra Augusto Aielo</figcaption>
+        <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" class="imagem-oval">
+        <fieldset>
+          <figcaption class="textCenter">
+            Aniversário do IFSP - Pirituba - Palestra Augusto Aielo
+          </figcaption>
+        </fieldset>
       </figure>
     </aside>
 
     <section>
       <h2 class="textCenter">Conheça os desafios de inovação</h2>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5g5LQe3m8Po?si=cQs79K39QFQnwUN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5g5LQe3m8Po?si=cQs79K39QFQnwUN9"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
   </main>
@@ -92,8 +108,12 @@
   <footer class="transparente">
     <br><br>
     <div id="my_menu" align="left">
-      <a href="#cabecalho"><img src="Imagens/MoveTop.png" width="41" height="43" title="Mover para o topo" alt="Mover para o topo"></a> |
-      <a href="https://www.facebook.com/ifsppirituba"><img src="Imagens/facebook.png" width="41" height="43" title="IFSP Facebook" alt="IFSP Facebook"></a>
+      <a href="#cabecalho" aria-label="Mover para o topo">
+        <img src="Imagens/MoveTop.png" width="41" height="43" title="Mover para o topo" alt="Mover para o topo">
+      </a> |
+      <a href="https://www.facebook.com/ifsppirituba" aria-label="Acessar Facebook do IFSP Pirituba">
+        <img src="Imagens/facebook.png" width="41" height="43" title="IFSP Facebook" alt="IFSP Facebook">
+      </a>
     </div>
     <p>
       IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
