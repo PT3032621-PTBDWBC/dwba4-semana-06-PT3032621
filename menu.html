@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>IFSP - Pirituba</title>
-<script src="js/disabling.js"></script>
+  <meta charset="UTF-8">
+  <title>IFSP - Pirituba</title>
+  <script src="js/disabling.js"></script>
 </head>
 <style>
-	/* Estilizando o dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+  /* Estiliza o cabeçalho com fundo preto */
+  header {
+    background-color: black; /* Fundo preto */
+    padding: 10px; /* Adiciona espaço interno */
+  }
 
-.dropbtn {
-  color: white;
-  text-decoration: none;
-  padding: 0 15px; /* Ajuste de espaçamento */
-}
+  /* Define o estilo para o menu */
+  #my_menu {
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: space-between; /* Espaça corretamente os itens */
+    align-items: center; /* Alinha verticalmente */
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 200px; /* Largura mínima */
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra */
-  z-index: 1000;
-}
+  /* Estiliza os links do menu */
+  #my_menu a {
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px 15px; /* Adiciona espaçamento */
+  }
 
-.dropdown-content a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px; /* Espaço interno */
-}
+  /* Mantém os links principais alinhados à esquerda */
+  #my_menu a:not(.menu-right) {
+    text-align: left; /* Alinhado à esquerda */
+  }
 
-.dropdown-content a:hover {
-  background-color: #555; /* Cor de destaque ao passar o mouse */
-}
+  /* Alinha o "SOBRE" à direita */
+  .menu-right {
+    margin-left: auto; /* Empurra o item para a direita */
+  }
 
-.dropdown:hover .dropdown-content {
-  display: block; /* Mostra o menu ao passar o mouse */
-}
-</style>	
+  /* Estilizando o dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px 15px; /* Ajuste de espaçamento */
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white; /* Fundo branco */
+    min-width: 200px; /* Largura mínima */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    color: black; /* Texto preto */
+    text-decoration: none; /* Remove sublinhado */
+    display: block;
+    padding: 10px; /* Espaço interno */
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd; /* Cinza claro ao passar o mouse */
+  }
+
+  /* Mostra o menu ao passar o mouse */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
 <body>
   <header>
-  <div id="my_menu">
-    <a href="index.html" target="_top">HOME</a>
-    <a href="eventos.html" target="_top">EVENTOS</a>
-    <a href="contato.html" target="_top">CONTATO</a>
-    <a href="entrar.html" target="_top">ENTRAR</a>
-    <div class="dropdown">
-      <a href="#" class="dropbtn">CURSOS</a>
-      <div class="dropdown-content">
-        <a href="ads.html" target="_top">Análise e Desenvolvimento de Sistemas</a>
-        <a href="engenhariaProducao.html" target="_top">Engenharia de Produção</a>
+    <div id="my_menu">
+      <a href="index.html" target="_top">HOME</a>
+      <a href="eventos.html" target="_top">EVENTOS</a>
+      <a href="contato.html" target="_top">CONTATO</a>
+      <a href="entrar.html" target="_top">ENTRAR</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">CURSOS</a>
+        <div class="dropdown-content">
+          <a href="ads.html" target="_top">Análise e Desenvolvimento de Sistemas</a>
+          <a href="engenhariaProducao.html" target="_top">Engenharia de Produção</a>
+        </div>
       </div>
-    </div>
-    <a href="sobre.html" class="menu-right" target="_top">SOBRE</a>
-  </div>  
-</header>
+      <a href="sobre.html" class="menu-right" target="_top">SOBRE</a>
+    </div>  
+  </header>
 </body>
 </html>
