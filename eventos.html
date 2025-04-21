@@ -8,17 +8,16 @@
       overflow-x: hidden;
     }
 
-  /* Caixa de seleção com fundo bege e borda */
-  select[name="evento"] {
-    background-color: beige; /* Fundo bege */
-    color: black; /* Texto preto */
-    border: 2px solid #000; /* Bordas pretas */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Arredondar cantos */
-    width: 100%; /* Largura ocupando 90% do contêiner */
-  }
-
+    /* Caixa de seleção com fundo bege e borda */
+    select[name="evento"] {
+      background-color: beige; /* Fundo bege */
+      color: black; /* Texto preto */
+      border: 2px solid #000; /* Bordas pretas */
+      padding: 10px; /* Espaçamento interno */
+      font-size: 16px; /* Tamanho da fonte */
+      border-radius: 5px; /* Arredondar cantos */
+      width: 100%; /* Largura ocupando 90% do contêiner */
+    }
 
     fieldset {
       border: 2px solid black;
@@ -36,9 +35,16 @@
       margin-bottom: 10px;
     }
     
-    input[type="email"], input[type="email"] {
-      width: 100px;
-      margin-bottom: 10px;
+    /* Ajuste para caixas específicas ocuparem largura total */
+    input[type="email"]#input_email,
+    input[type="text"]#celular,
+    input[type="text"]#perfilGit {
+      width: 100%; /* Ocupa toda a largura disponível */
+      padding: 10px; /* Adiciona espaçamento interno */
+      font-size: 16px; /* Ajusta o tamanho do texto */
+      border: 1px solid #000; /* Define uma borda */
+      border-radius: 5px; /* Bordas arredondadas */
+      box-sizing: border-box; /* Inclui bordas e padding na largura total */
     }
 
     input[type="submit"] {
@@ -51,7 +57,7 @@
     }
 
     /* Ajuste para alinhar a imagem totalmente à esquerda */
-   .logo-container {
+    .logo-container {
       background-color: green;
       display: flex;
       justify-content: flex-start; /* Alinha a imagem à esquerda */
@@ -135,14 +141,13 @@
   <fieldset>
     <legend>Informações Pessoais</legend>
     <label for="nome">Nome Completo</label>
-    <input type="text" id="usuario" name="usuario"required>
+    <input type="text" id="usuario" name="usuario"required><br>
     <br>
     <label for="input_email">E-mail</label>
-    <input type="email"  name="email" id="input_email"required>
+    <input type="email" name="email" id="input_email"required><br>
     <br>
-    <label for="celular">Celular</label>
+    <label for="celular">Celular (99) 99999-9999</label>
     <input type="text" id="celular" name="celular"required>
-	<span>(99) 99999-9999</span>
     <fieldset>
     <legend>Sexo</legend>
     <input type="radio" value="M" name="lp"/>Masculino
