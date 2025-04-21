@@ -10,17 +10,18 @@
     body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* Remove a barra de rolagem horizontal */
     }
 
     .imagem-oval {
-      width: 80%;
-      max-width: 500px;
-      height: auto;
-      object-fit: cover;
-      border-radius: 50% / 35%;
-      display: block;
-      margin: 0 auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .textCenter {
@@ -34,17 +35,21 @@
       z-index: 100;
     }
 
+    /* Ajuste para alinhar a imagem totalmente à esquerda */
     .logo-container {
       background-color: green;
-      padding: 20px;
-      text-align: left;
-      width: 100%;
+      display: flex;
+      justify-content: flex-start; /* Alinha a imagem à esquerda */
+      align-items: center;
+      height: auto;
+      padding-left: 0; /* Remove espaçamento extra à esquerda */
     }
 
     .logo {
       display: block;
       width: auto;
-      height: auto;
+      height: 100%;
+      max-height: 100%;
     }
 
     iframe {
@@ -61,6 +66,18 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+
+    fieldset.legenda {
+        width: 98%;
+        max-width: 100%;
+        text-align: center;
+        border: 2px solid #000;
+        padding: 5px;
+        margin: 10px auto;
+        display: block;
+        box-sizing: border-box;
+        height: auto;
     }
   </style>
 </head>
@@ -84,14 +101,17 @@
   <main>
     <aside>
       <h2 class="textCenter">Acontece no IFSP!</h2>
+      
       <figure>
         <img src="Imagens/SEJA_RARO.jpg" alt="Palestra Seja Raro" class="imagem-oval">
-        <fieldset>
-          <figcaption class="textCenter">
-            Aniversário do IFSP - Pirituba - Palestra Augusto Aielo
-          </figcaption>
-        </fieldset>
       </figure>
+
+      <fieldset class="legenda">
+        <figcaption class="textCenter">
+          Aniversário do IFSP - Pirituba - Palestra Augusto Aielo
+        </figcaption>
+      </fieldset>
+      
     </aside>
 
     <section>
