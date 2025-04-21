@@ -5,30 +5,106 @@
   <title>Contato - IFSP - Pirituba</title>
   <script src="js/disabling.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    #menu-container {
+      position: relative;
+      z-index: 100;
+    }
+
+   /* Ajuste para alinhar a imagem totalmente à esquerda */
+   .logo-container {
+      background-color: green;
+      display: flex;
+      justify-content: flex-start; /* Alinha a imagem à esquerda */
+      align-items: center;
+      height: auto;
+      padding-left: 0; /* Remove espaçamento extra à esquerda */
+    }
+
+    .logo {
+      display: block;
+      width: auto;
+      height: 100%;
+      max-height: 100%;
+    }
+
+    /* Adiciona fundo com cor em volta */
+    .form-group {
+      background-color: #f0f0f0; /* Fundo cinza claro */
+      padding: 10px; /* Espaçamento interno */
+      border-radius: 5px; /* Bordas arredondadas */
+      margin-bottom: 10px; /* Espaçamento entre os elementos */
+    }
+
+    .button-group {
+      background-color: #f0f0f0; /* Fundo cinza claro */
+      padding: 10px; /* Espaçamento interno */
+      border-radius: 5px; /* Bordas arredondadas */
+    }
+    /* Estilo para os botões */
+    input[type="submit"] {
+      width: 100%; /* Define a largura dos botões */
+      padding: 10px; /* Adiciona espaçamento interno */
+      font-size: 16px; /* Ajusta o tamanho da fonte */
+      color: white; /* Cor do texto */
+      background-color: green; /* Cor do fundo */
+      border: none; /* Remove bordas padrão */
+      border-radius: 5px; /* Arredonda os cantos */
+      cursor: pointer; /* Adiciona um cursor de "mão" */
+    }
+
+    /* Efeito ao passar o mouse */
+    input[type="submit"]:hover {
+      background-color: darkgreen; /* Fundo mais escuro no hover */
+    }
+  </style>
 </head>
 <body>
   <header id="cabecalho">
-    <nav>
-      <object width="100%" height="65px" data="menu.html"></object>
-    </nav>
+    <div id="menu-container"></div>
+
+    <script>
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('menu-container').innerHTML = data)
+        .catch(error => console.error('Erro ao carregar o menu:', error));
+    </script>
+
+    <div class="logo-container">
+      <img src="Imagens/Logo.jpg" alt="IF" class="logo">
+    </div>
   </header>
-  
-  <img src="Imagens/Logo.jpg" alt="Logo IFSP" />
+
   <br>
   <h1>Entrar</h1>
   <br>
-  <form>
-  <label for="usuario">Usuário</label>
-  <input type="text" id="usuario" name="usuario" required><br />
-  <br>
-  <label for="senha">Senha</label>
-  <input type="password" id="senha" name="senha" required><br />
-  <br>
-  <input type="submit" value="Entrar" style="display: inline; margin-right: 10px;">
-<button style="background: none; border: none; color: blue; text-decoration: underline; text-decoration-color: blue; cursor: pointer; display: inline;">Esqueci a Senha</button><br>
-<br>
-<br/>
 
+  <form>
+    <div class="form-group">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" name="usuario" required>
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required>
+    </div>
+
+    <div class="button-group">
+      <input type="submit" value="Entrar" style="display: inline; margin-right: 10px;">
+      <button style="background: none; border: none; color: blue; text-decoration: underline; text-decoration-color: blue; cursor: pointer; display: inline;">
+        Esqueci a Senha
+      </button>
+    </div>
+  </form>
+
+  <br>
   <footer>
     <a href="https://www.facebook.com/ifsppirituba">
       <img src="https://raw.githubusercontent.com/PT3032621-PTBDWBC/semana05-PT3032621/refs/heads/main/Imagens/facebook.png" 
