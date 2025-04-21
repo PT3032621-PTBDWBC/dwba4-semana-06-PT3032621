@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADS - IFSP - Pirituba</title>
+<script src="js/disabling.js"></script>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+     #menu-container {
+      position: relative;
+      z-index: 100;
+    }
+
+    /* Ajuste para alinhar a imagem totalmente à esquerda */
+    .logo-container {
+      background-color: green;
+      display: flex;
+      justify-content: flex-start; /* Alinha a imagem à esquerda */
+      align-items: center;
+      height: auto;
+      padding-left: 0; /* Remove espaçamento extra à esquerda */
+    }
+
+    .logo {
+      display: block;
+      width: auto;
+      height: 100%;
+      max-height: 100%;
+    }
+
+</style>
+</head>
+<body>
+
+    <header id="cabecalho">
+        <div id="menu-container"></div>
+    
+        <script>
+          fetch('menu.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('menu-container').innerHTML = data)
+            .catch(error => console.error('Erro ao carregar o menu:', error));
+        </script>
+    
+        <div class="logo-container">
+          <img src="Imagens/Logo.jpg" alt="IF" class="logo">
+        </div>
+      </header>
+      <br>
+
+<p><strong>Engenharia de Produção</strong></p>
+<br>
+<em>Objetivo Geral:</em>
+<br>
+O curso de Engenharia de Produção tem como objetivo capacitar o egresso a atuar na área de Gestão e Desenvolvimento de Processos Produtivos, desempenhando atividades como planejamento, controle, melhoria e otimização de sistemas de produção em diversos setores. Essa capacitação é pautada pela valorização da prática e competências técnicas, tanto em gerenciamento quanto em análise de processos, e pela atualização constante diante das inovações tecnológicas e industriais. Dessa forma, o profissional formado será capaz de integrar recursos humanos, financeiros e tecnológicos, servindo como mediador competente entre os avanços produtivos e as demandas da sociedade em que está inserido.
+ <footer>
+        <br><br>
+        <div id="my_menu" align="left">
+            <a href="https://www.facebook.com/ifsppirituba"><img src="Imagens/facebook.png" width="41" height="43" title="IFSP Facebook" alt="IFSP Facebook"></a>
+        </div>
+        <p>
+            IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
+        </p>
+    </footer>
+</body>
+</html>
+
