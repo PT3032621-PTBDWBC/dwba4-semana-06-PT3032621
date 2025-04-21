@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -5,15 +6,53 @@
   <title>Contato - IFSP - Pirituba</title>
   <script src="js/disabling.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    #menu-container {
+      position: relative;
+      z-index: 100;
+    }
+
+    /* Ajuste para alinhar a imagem totalmente à esquerda */
+   .logo-container {
+      background-color: green;
+      display: flex;
+      justify-content: flex-start; /* Alinha a imagem à esquerda */
+      align-items: center;
+      height: auto;
+      padding-left: 0; /* Remove espaçamento extra à esquerda */
+    }
+
+    .logo {
+      display: block;
+      width: auto;
+      height: 100%;
+      max-height: 100%;
+    }
+
+
+  </style>
 </head>
 <body>
   <header id="cabecalho">
-    <nav>
-      <object width="100%" height="65px" data="menu.html"></object>
-    </nav>
+    <div id="menu-container"></div>
+
+    <script>
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('menu-container').innerHTML = data)
+        .catch(error => console.error('Erro ao carregar o menu:', error));
+    </script>
+
+    <div class="logo-container">
+      <img src="Imagens/Logo.jpg" alt="IF" class="logo">
+    </div>
   </header>
-  
-  <img src="Imagens/Logo.jpg" alt="Logo IFSP" />
   <br>
   <h1>Sobre</h1><br>
   <br>
